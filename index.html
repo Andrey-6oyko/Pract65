@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сума двох чисел</title>
+    <title>Обчислення суми двох чисел</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="calculator-form">
         <h2>Обчислення суми двох чисел</h2>
-        <form action="calculate.php" method="post" onsubmit="return calculateSum(event)">
-            <label for="number1">Число 1:</label>
-            <input type="number" id="number1" name="number1" required><br><br>
+        <form id="sumForm">
+            <label for="number1">Число 1</label>
+            <input type="number" id="number1" name="number1" required>
 
-            <label for="number2">Число 2:</label>
-            <input type="number" id="number2" name="number2" required><br><br>
+            <label for="number2">Число 2</label>
+            <input type="number" id="number2" name="number2" required>
 
-            <input type="submit" value="Обчислити">
+            <input type="button" value="Обчислити" onclick="calculateSum()">
         </form>
-        <br>
-        <label for="result">Результат:</label>
-        <input type="text" id="result" readonly>
+        <div id="result"></div>
     </div>
 
-    <script src="main.js" > </script>
+    <script src="main.js"></script>
 </body>
 </html>
